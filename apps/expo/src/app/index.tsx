@@ -8,6 +8,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import type { RouterOutputs } from "~/utils/api";
 import { trpc } from "~/utils/api";
 import { authClient } from "~/utils/auth";
+import { ConnectionStatus } from "../components/ConnectionStatus";
 
 function PostCard(props: {
   post: RouterOutputs["post"]["all"][number];
@@ -152,6 +153,9 @@ export default function Index() {
           </Text>
         </View>
 
+        <ConnectionStatus
+          status={postQuery.isPending ? "loading" : postQuery.isError ? "error" : "ready"}
+        />
         <LegendList
           data={postQuery.data ?? []}
           estimatedItemSize={20}

@@ -284,3 +284,7 @@ Deploying your Expo application works slightly differently compared to Next.js o
 The stack originates from [create-t3-app](https://github.com/t3-oss/create-t3-app).
 
 A [blog post](https://jumr.dev/blog/t3-turbo) where I wrote how to migrate a T3 app into this.
+
+## Fork contribution notes
+
+This repository is a fork of [t3-oss/create-t3-turbo](https://github.com/t3-oss/create-t3-turbo). The `troy/expo-experiments` branch starts from upstream commit `8f945b7bb3bfb3ca8358d48b1ff0214079bc11ee` and adds a typed, reusable Expo connection-status component that surfaces loading, API-error, and connected states in the mobile post list. The upstream starter and its original attribution are preserved.
